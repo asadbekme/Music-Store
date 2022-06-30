@@ -1,0 +1,237 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap');
+
+/* Core styles */
+* {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    transition: .2s linear;
+}
+
+$white: #fff;
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Home section styles */
+.wrapper {
+    background: url("../images/home-bg.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .header {
+        position: relative;
+        z-index: 1000;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 0;
+
+            .links {
+                display: flex;
+                align-items: center;
+                
+                .logo {
+                    width: auto;
+                    height: 2.5rem;
+                    margin-right: 2rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .navbar {
+
+                    a {
+                        font-family: 'Work Sans', sans-serif;
+                        font-size: 1.7rem;
+                        color: $white;
+                        margin: 2.5rem;
+                        font-weight: 500;
+                        text-transform: capitalize;
+
+                        &:hover {
+                            color: #eeebbb;
+                        }
+                    }
+                }
+            }
+
+            .icons {
+                
+                div {
+                    font-size: 2rem;
+                    margin: 0 .5rem;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-top: 12rem;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .info {
+
+                h2 {
+                    font-weight: 700;
+                    font-size: 5rem;
+                    letter-spacing: 2%;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+#menu-btn {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media (max-width: 991px) {
+
+    .wrapper {
+
+        .header {
+            padding: 2rem;
+
+            .container {
+
+                .links {
+
+                    .navbar {
+
+                        a {
+                            margin: 1.5rem;
+                        }
+                    }
+                }
+
+                .icons {
+
+                    div {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .content {
+            padding: 2rem;
+        }
+    }
+
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+
+        .header {
+
+            .container {
+
+                .links {
+                    
+                    .navbar {
+                        position: absolute;
+                        top: 99%; left: 0; right: 0;
+                        background-color: #04090F;
+                        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                        &.active {
+                            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                        }
+                        
+                        a {
+                            color: $white;
+                            display: block;
+
+                            &:hover {
+                                color: crimson;
+                            }
+                        }
+                    }
+                }
+
+                .icons {
+                    
+                    // #cart-btn, #user-btn {
+                    //     display: none;
+                    // }
+
+                    #menu-btn {
+                        display: inline-block;
+
+                        &.fa-times {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            margin-top: 4rem;
+
+            .container {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+}
