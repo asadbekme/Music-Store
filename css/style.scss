@@ -13,6 +13,13 @@
 }
 
 $white: #fff;
+$bg-color: #ECECEC;
+
+@mixin grid($value) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap: 1.5rem;
+}
 
 html {
     font-size: 62.5%;
@@ -21,13 +28,13 @@ html {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1120px;
     margin: 0 auto;
 }
 
 /* Home section styles */
 .wrapper {
-    background: url("../images/home-bg.svg") no-repeat;
+    background: url("../images/home.png") no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -111,6 +118,43 @@ html {
     display: none;
 }
 
+/* Products section styles */
+.products {
+    margin-top: 5rem;
+
+    .container {
+
+        .box-container {
+            @include grid(35rem);
+
+            .box {
+                border-radius: 1rem;
+                background-color: $white;
+                
+                .image {
+                    width: 35.5rem;
+                    height: 24rem; 
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .content {
+                    margin: 2rem;
+
+                    .about {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -204,9 +248,9 @@ html {
 
                 .icons {
                     
-                    // #cart-btn, #user-btn {
-                    //     display: none;
-                    // }
+                    #cart-btn, #user-btn {
+                        display: none;
+                    }
 
                     #menu-btn {
                         display: inline-block;
