@@ -116,7 +116,7 @@ html {
 }
 
 .wrapper .content {
-  margin-top: 12rem;
+  margin-top: 9rem;
 }
 
 .wrapper .content .container {
@@ -346,7 +346,6 @@ html {
 
 .images .container .image-container .box-container__top .box1 .image {
   height: 48rem;
-  border-radius: 1rem;
 }
 
 .images .container .image-container .box-container__top .box1 .image img {

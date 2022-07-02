@@ -119,7 +119,7 @@ html {
     }
 
     .content {
-        margin-top: 12rem;
+        margin-top: 9rem;
 
         .container {
             display: flex;
@@ -336,7 +336,6 @@ html {
 
                     .image {
                         height: 48rem;
-                        border-radius: 1rem;
 
                         img {
                             width: 100%;
@@ -575,6 +574,14 @@ html {
 
 
 /* Media queries */
+// @media (max-width: 1200px) {
+
+//     .wrapper, .banner, .products, .popular, .images, .footer {
+//         padding: 4rem;
+//     }
+// }
+
+
 @media (max-width: 991px) {
 
     html {
