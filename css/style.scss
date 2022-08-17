@@ -33,6 +33,7 @@ html {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 3.5rem;
 }
 
 .heading {
@@ -67,12 +68,10 @@ html {
         z-index: 1000;
         top: 0; left: 0; right: 0;
 
-
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 4rem 0;
 
             .links {
                 display: flex;
@@ -262,7 +261,6 @@ html {
     background-color: $bg-color;
 
     .container {
-        padding: 5rem 0;
 
         .box-container {
             @include grid(30rem);
@@ -489,7 +487,6 @@ html {
     margin-top: 6rem;
 
     .container {
-        padding: 4rem 0;
 
         .box-container {
             display: flex;
